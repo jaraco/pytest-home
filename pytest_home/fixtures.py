@@ -13,10 +13,9 @@ def alt_home(monkeypatch, tmp_path_factory):
     >>> pathlib.Path('~').expanduser() == home
     True
     """
-    var = 'USERPROFILE' if platform.system() == 'Windows' else 'HOME'
+    win = platform.system() == 'Windows'
+    vars = ['HOME'] + win * ['USERPROFILE']
     home = tmp_path_factory.mktemp('home')
-    monkeypatch.setenv(var, str(home))
-    if platform.system() == 'Windows':  # pragma: no cover
-        monkeypatch.delenv('HOMEDRIVE', raising=False)
-        monkeypatch.delenv('HOMEPATH', raising=False)
+    for var in vars:
+        monkeypatch.setenv(var, str(home))
     return home
