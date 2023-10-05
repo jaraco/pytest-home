@@ -1,0 +1,1 @@
+For better Git compatibility, suppress HOMEDRIVE and HOMEPATH vars.

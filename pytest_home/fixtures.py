@@ -16,4 +16,7 @@ def alt_home(monkeypatch, tmp_path_factory):
     var = 'USERPROFILE' if platform.system() == 'Windows' else 'HOME'
     home = tmp_path_factory.mktemp('home')
     monkeypatch.setenv(var, str(home))
+    if platform.system() == 'Windows':
+        monkeypatch.delenv('HOMEDRIVE', raising=False)
+        monkeypatch.delenv('HOMEPATH', raising=False)
     return home
