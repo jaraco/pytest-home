@@ -1,11 +1,11 @@
 import subprocess
 
 
-def test_git_no_config(alt_home):
+def test_git_no_config(tmp_home_dir):
     """
-    Ensure git finds config in alt_home.
+    Ensure git finds config in tmp_home_dir.
     """
-    alt_home.joinpath('.gitconfig').write_text(
+    tmp_home_dir.joinpath('.gitconfig').write_text(
         '[user]\nemail="joe@pie.com"', encoding='utf-8'
     )
     out = subprocess.check_output(['git', 'config', 'user.email'])

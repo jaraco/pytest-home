@@ -5,9 +5,9 @@ import pytest
 
 
 @pytest.fixture
-def alt_home(monkeypatch, tmp_path_factory):
+def tmp_home_dir(monkeypatch, tmp_path_factory):
     """
-    >>> home = getfixture('alt_home')
+    >>> home = getfixture('tmp_home_dir')
     >>> list(home.iterdir())
     []
     >>> import pathlib

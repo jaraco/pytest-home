@@ -1,0 +1,1 @@
+Renamed 'alt_home' fixture to 'tmp_home_dir'.
