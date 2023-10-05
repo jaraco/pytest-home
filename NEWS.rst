@@ -1,3 +1,12 @@
+v0.3.0
+======
+
+Features
+--------
+
+- Exposed 'set' function for setting the home dir outside a fixture.
+
+
 v0.2.0
 ======
 

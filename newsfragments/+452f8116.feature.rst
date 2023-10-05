@@ -1,1 +1,0 @@
-Exposed 'set' function for setting the home dir outside a fixture.
