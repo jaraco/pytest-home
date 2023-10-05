@@ -1,3 +1,12 @@
+v0.2.0
+======
+
+Features
+--------
+
+- For better Git compatibility, set HOME unconditionally. (#1)
+
+
 v0.1.1
 ======
 
