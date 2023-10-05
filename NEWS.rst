@@ -1,3 +1,12 @@
+v0.5.0
+======
+
+Features
+--------
+
+- Renamed 'alt_home' fixture to 'tmp_home_dir'.
+
+
 v0.4.0
 ======
 
