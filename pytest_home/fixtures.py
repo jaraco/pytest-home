@@ -14,10 +14,10 @@ def alt_home(monkeypatch, tmp_path_factory):
     >>> pathlib.Path('~').expanduser() == home
     True
     """
-    return set(monkeypatch, tmp_path_factory.mktemp('home'))
+    return _set(monkeypatch, tmp_path_factory.mktemp('home'))
 
 
-def set(monkeypatch, path: pathlib.Path):
+def _set(monkeypatch, path: pathlib.Path):
     """
     Set the home dir using a pytest monkeypatch context.
     """
