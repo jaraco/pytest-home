@@ -1,3 +1,4 @@
+import pathlib
 import platform
 
 import pytest
@@ -13,9 +14,15 @@ def alt_home(monkeypatch, tmp_path_factory):
     >>> pathlib.Path('~').expanduser() == home
     True
     """
+    return set(monkeypatch, tmp_path_factory.mktemp('home'))
+
+
+def set(monkeypatch, path: pathlib.Path):
+    """
+    Set the home dir using a pytest monkeypatch context.
+    """
     win = platform.system() == 'Windows'
     vars = ['HOME'] + win * ['USERPROFILE']
-    home = tmp_path_factory.mktemp('home')
     for var in vars:
-        monkeypatch.setenv(var, str(home))
-    return home
+        monkeypatch.setenv(var, str(path))
+    return path
