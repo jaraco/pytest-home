@@ -1,3 +1,12 @@
+v0.4.0
+======
+
+Features
+--------
+
+- Moved 'set' to the top-level 'pytest_home'.
+
+
 v0.3.0
 ======
 
