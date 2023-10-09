@@ -11,6 +11,11 @@ Welcome to |project| documentation!
    history
 
 
+.. automodule:: pytest_home
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 .. automodule:: pytest_home.fixtures
     :members:
     :undoc-members:
