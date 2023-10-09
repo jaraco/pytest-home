@@ -1,3 +1,12 @@
+v0.5.1
+======
+
+Bugfixes
+--------
+
+- Enabled docs publishing to Read The Docs.
+
+
 v0.5.0
 ======
 
