@@ -49,6 +49,6 @@ doc = [
 ]
 
 [project.entry-points]
-pytest11 = {"pytest home" = "pytest_home.fixtures"}
+pytest11 = {"home" = "pytest_home.fixtures"}
 
 [tool.setuptools_scm]
