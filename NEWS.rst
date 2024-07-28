@@ -1,3 +1,12 @@
+v0.6.0
+======
+
+Features
+--------
+
+- Renamed the plugin to simply 'home' for easy enabling/disabling. (#5)
+
+
 v0.5.1
 ======
 
